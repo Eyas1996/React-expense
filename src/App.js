@@ -26,6 +26,12 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
+    {
+      id: "e5",
+      title: "Dienstplan",
+      amount: 50,
+      date: new Date(2023, 4, 1),
+    },
   ];
 
   return (
@@ -50,6 +56,11 @@ function App() {
         title={expenses[3].title}
         amount={expenses[3].amount}
         date={expenses[3].date}
+      />
+      <ExpenseItem
+        title={expenses[4].title}
+        amount={expenses[4].amount}
+        date={expenses[4].date}
       />
     </div>
   );
