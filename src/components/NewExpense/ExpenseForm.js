@@ -13,27 +13,34 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (e) => {
-    setUserInput({
-      ...userInput,
-      enteredTitle: e.target.value,
+    // setEnteredTitle(e.target.value);
+
+    // setUserInput({
+    //   ...userInput,
+    //   enteredTitle: e.target.value,
+    // });
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: e.target.value };
     });
-    console.log(setUserInput.enteredTitle);
+    console.log(userInput.enteredTitle);
   };
 
   const amountChangeHandler = (e) => {
+    // enteredAmount(e.target.value);
     setUserInput({
       ...userInput,
       enteredAmount: e.target.value,
     });
-    // console.log(enteredAmount);
+    console.log(userInput.enteredAmount);
   };
 
   const dateChangeHandler = (e) => {
+    // setEnteredDate(e.target.value);
     setUserInput({
       ...userInput,
       enteredDate: e.target.value,
     });
-    // console.log(enteredDate);
+    console.log(userInput.enteredDate);
   };
 
   return (
@@ -43,7 +50,7 @@ const ExpenseForm = () => {
           <label>Title</label>
           <input
             type="text"
-            // value={setUserInput.enteredTitle}
+            // value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
