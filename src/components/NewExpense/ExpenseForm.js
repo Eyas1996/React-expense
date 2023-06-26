@@ -51,7 +51,7 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData)
+    console.log(expenseData);
   };
   return (
     <form onSubmit={submitHandler}>
