@@ -19,6 +19,7 @@ const ExpenseForm = () => {
     //   ...userInput,
     //   enteredTitle: e.target.value,
     // });
+
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: e.target.value };
     // });
@@ -52,6 +53,9 @@ const ExpenseForm = () => {
     };
 
     console.log(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
   return (
     <form onSubmit={submitHandler}>
@@ -60,7 +64,7 @@ const ExpenseForm = () => {
           <label>Title</label>
           <input
             type="text"
-            // value={enteredTitle}
+            value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
@@ -70,7 +74,7 @@ const ExpenseForm = () => {
             type="number"
             min="0.01"
             step="0.01"
-            // value={enteredAmount}
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -80,7 +84,7 @@ const ExpenseForm = () => {
             type="date"
             min="2019-01-01"
             step="2023-12-31"
-            // value={enteredDate}
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
